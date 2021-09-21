@@ -22,3 +22,34 @@
 <p>Responses:<br />Success<br />{'status':201, 'message':'success', 'details': 'Transaction Successful'}<br />Failed<br />{'status':205, 'message':'failure', 'details': 'Transaction Not Successful'}<br />{'status':400, 'message':'error', 'details':'Insufficient Balance'}<br />{'status':400, 'message':'Bad Request', 'details':' Bad Request check your paramaters'}<br />End of Electricity API</p>
 <p>RESULT CHECKER API<br />https://PORTAL_URL/api/v1/resultCheckers?format=json&amp;api-token=API_TOKEN&amp;pin_type=[SERVICE]</p>
 <p>SERVICE CAN BE "neco" or "waec" (that depends on the identifier)</p>
+<br/>
+<p><< Recharge Card Printing >></p>
+<br/>
+<p>check stock method = GET<br/>
+https://PORTAL_URL/api/v1/getCardCountApi?network_c=NETWORK_CODE&denomination_c=AMOUNT
+<br/>
+network_c e.g MTN, 9MOBILE, GLO<br/>
+denomination_c e.g 100, 200, 500, 1000 </p>
+<br/><br/>
+<p>
+Generate method = POST<br/>
+https://PORTAL_URL/api/v1/decodedPrintApi?quantity=quantity&denomination=denomination&network=network&company=company
+<br/>
+quantity e.g 1
+denomination e.g 100, 200, 500, 1000
+network e.g MTN, 9MOBILE, AIRTEL, GLO
+company e.g Name of company
+</p>
+
+<p>
+Get generated cards list method = GET<br/>
+https://PORTAL_URL/api/v1/listPinDetails
+</p>
+
+<p>
+GET get details method = GET<br/>
+https://PORTAL_URL/api/v1/getRCPinDetails?transId=transId
+</p>
+
+transId e.g xxxxxxxxxxxxx
+
